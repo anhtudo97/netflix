@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useRecoilState } from 'recoil'
-import { modalState, movieState } from '../atoms/modalAtom.'
+import { modalState, movieState } from '../atoms/modalAtom'
 import ReactPlayer from 'react-player/lazy'
 import { FaPlay } from 'react-icons/fa'
 import {

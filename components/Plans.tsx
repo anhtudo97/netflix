@@ -20,6 +20,7 @@ function Plans({ products }: Props) {
   console.log(products)
 
   const subscribeToPlan = () => {
+    console.log('tuanh')
     if (!user) return
 
     loadCheckout(selectedPlan?.prices[0].id!)

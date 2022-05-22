@@ -36,6 +36,7 @@ const Home = ({
   trendingNow,
   products,
 }: Props) => {
+  console.log(products)
   const { user, loading } = useAuth()
   const subscription = useSubscription(user)
   const showModal = useRecoilValue(modalState)
@@ -111,6 +112,17 @@ export const getServerSideProps = async () => {
     fetch(requests.fetchRomanceMovies).then((res) => res.json()),
     fetch(requests.fetchDocumentaries).then((res) => res.json()),
   ])
+
+  console.log(
+    netflixOriginals,
+    trendingNow,
+    topRated,
+    actionMovies,
+    comedyMovies,
+    horrorMovies,
+    romanceMovies,
+    documentaries
+  )
 
   return {
     props: {
